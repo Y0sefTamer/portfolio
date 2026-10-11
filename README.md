@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web3 Portfolio
+
+A modern, developer-first portfolio for **Yosef Tamer**, a Web3 & Smart Contract Engineer.
+
+Built with Next.js (App Router) and Tailwind CSS v4, featuring a sleek dark theme with neon purple/blue accents, scroll-reveal animations, and pointer-tracked spotlight cards.
+
+## Features
+
+- **Hero** — name, title, short bio, social links, and primary CTAs.
+- **Featured Projects** — responsive card grid with tech-stack badges and `Live DApp` / `GitHub Repo` buttons.
+- **Tech Stack** — categorized into Smart Contracts, Frontend & Web3, and Tools & Environment.
+- **Contact** — email CTA plus social profile links.
+- **Design** — dark slate/zinc theme with neon accents, animated aurora background, gradient text, glassmorphism, and full responsiveness.
+- **Animations** — subtle scroll-reveal layer (IntersectionObserver) and pointer-tracked spotlight glow on cards, both respecting `prefers-reduced-motion`.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router, React 19)
+- **Styling:** Tailwind CSS v4 (`@tailwindcss/turbopack`)
+- **Language:** TypeScript
+- **Fonts:** Geist / Geist Mono via `next/font`
+- **Icons:** Inline SVG components (zero dependencies)
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and start the dev server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start the dev server     |
+| `npm run build` | Production build         |
+| `npm run start` | Start the production app |
+| `npm run lint`  | Run ESLint               |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.tsx        # Root layout: metadata, fonts, background layers
+  page.tsx          # Composes the sections
+  globals.css       # Theme tokens, animations, reveal/spotlight styles
+components/
+  navbar.tsx
+  hero.tsx
+  projects.tsx
+  tech-stack.tsx
+  contact.tsx
+  footer.tsx
+  section-heading.tsx
+  social-links.tsx
+  reveal.tsx        # Scroll-reveal wrapper (client)
+  spotlight-card.tsx# Pointer-tracked glow card (client)
+  icons.tsx         # Inline SVG icons
+lib/
+  data.ts           # Profile, projects and tech-stack content
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customizing Content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All editable content lives in [`lib/data.ts`](lib/data.ts):
+
+- `profile` — name, title, bio, email, location, and social links
+- `projects` — project title, description, tech badges, and `liveUrl` / `repoUrl`
+- `techStack` — categorized technology lists
+
+Replace the placeholder values before publishing:
+
+- `github.com/your-handle`
+- `linkedin.com/in/your-handle`
+- `x.com/your-handle`
+- `you@example.com`
+- each project's `liveUrl` and `repoUrl` (currently `#`)
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy is the [Vercel Platform](https://vercel.com/new). Import the repository and deploy — no configuration required.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is open source and available for reference.

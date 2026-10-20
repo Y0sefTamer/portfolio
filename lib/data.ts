@@ -77,6 +77,14 @@ export const projects: Project[] = [
     liveUrl: "https://github.com/Y0sefTamer/30-Days-Of-Solidity",
     repoUrl: "https://github.com/Y0sefTamer/30-Days-Of-Solidity",
   },
+  {
+    title: "Uniswap V1 Practice DEX",
+    description:
+      "This repository is a practice implementation of the Uniswap V1 automated market maker (AMM) model, built to learn how constant-product exchanges, liquidity tokens, and factory-based pool creation work.",
+    tags: ["Solidity", "Foundry", "Next.js", "Tailwind","vite", "Viem"],
+    liveUrl: "https://defi-dex-tau.vercel.app/",
+    repoUrl: "https://github.com/Y0sefTamer/defi_dex",
+  },
 ];
 
 export type TechCategory = {

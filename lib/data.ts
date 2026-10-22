@@ -64,9 +64,9 @@ export const projects: Project[] = [
   {
     title: "ERC-20 Faucet & Launchpad",
     description:
-      "Configurable token launchpad with rate-limited faucets, allowlists, and automated liquidity seeding for testnets.",
+      "Getting Sepolia ETH can be a bottleneck for new developers. Fluid lets anyone fund a shared faucet, while giving each wallet a fixed claim after a cooldown. The owner can tune the claim size and cooldown without redeploying, and the UUPS proxy preserves state across future logic upgrades.",
     tags: ["Solidity", "EVM", "Foundry", "Viem", "Next.js"],
-    liveUrl: "https://github.com/Y0sefTamer/Fluid-Sepolia",
+    liveUrl: "https://fluidsepolia.vercel.app/",
     repoUrl: "https://github.com/Y0sefTamer/Fluid-Sepolia",
   },
   {

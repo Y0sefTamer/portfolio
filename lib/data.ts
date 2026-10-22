@@ -62,7 +62,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Y0sefTamer/Bootcamp-EnglishAuction",
   },
   {
-    title: "ERC-20 Faucet & Launchpad",
+    title: "Fluid-Sepolia",
     description:
       "Getting Sepolia ETH can be a bottleneck for new developers. Fluid lets anyone fund a shared faucet, while giving each wallet a fixed claim after a cooldown. The owner can tune the claim size and cooldown without redeploying, and the UUPS proxy preserves state across future logic upgrades.",
     tags: ["Solidity", "EVM", "Foundry", "Viem", "Next.js"],
